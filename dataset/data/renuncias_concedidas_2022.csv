@@ -1,0 +1,29 @@
+﻿montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia;unnamed_1;unnamed_2;unnamed_3
+;;;
+EXERCÍCIO DE 2022;;;
+;;;1
+TRIBUTO;MODALIDADE;NORMA AUTORIZATIVA;MONTANTE DAS PERDAS 
+NOVAS RENÚNCIAS - CONCEDIDAS EM 2022 ;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;24976575.540023353
+ICMS;Remissão(3);Convênio ICMS 31/19 e Lei 6763/1975;14624489
+IPVA;Isenção(3) ;Convênio ICMS 161/21 e Lei nº 14.937/2003;4782976
+TOTAL ;;;44384040.54002336
+RENÚNCIAS PRÉ-EXISTENTES - ANTERIORES A 2022;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 4);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei 6763/1975;12716864156.757729
+ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;230582188.99700007
+ICMS;Anistia;Novo Regularize - Lei 22.549/2017, Regularize - Dec. 46.817/2015, Parcelamento Anistia - Lei 17.247/07 e REFIS 2021 - Lei 23.801/2021;978426577
+IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;1356593269
+IPVA;Isenção;Lei nº 14.937/2003;48101596
+IPVA;Anistia;Lei 23.801/2021;197571
+ITCD;Anistia;Lei 23.801/2021 e Regularize - Dec. 46.817/2015 ;6257314
+TAXAS;Anistia;Regularize - Dec. 46.817/2015;2201661
+TOTAL;;;15339224333.754728
+Fonte:;"Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED";;
+Elaboração: ;DIEF/SAIF/SEF-MG;;
+Notas:;;;
+1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.;;;
+2 - A SEF/MG, na eventual concessão de regime especial de tratamento tributário setorial que possa ser caracterizado como uma nova renúncia de receita de ICMS, irá adotar o dispositivo de salva guarda da arrecadação tributária, como medida de compensação de renúncia fiscal, consistente na aceitação pelo contribuinte de uma receita mínima nos exercícios seguintes, correspondente ao valor do ICMS devido a título de operação própria e substituição tributária, corretamente declarado no exercício fiscal anterior, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.;;;
+No caso de contribuinte que está iniciando as atividades no Estado, ou seja, investimento novo, a comparação será feita entre o valor recolhido no segundo período de 12 meses após o início de vigência do regime especial e o valor recolhido nos primeiros 12 meses após o início de vigência deste, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.;;;
+A fundamentação legal é no sentido de que não serão afetadas as metas de resultados fiscais do setor, nos termos do inciso I, art. 14 da Lei Complementar nº 101/2000.;;;
+3 - Incremento de receita no exercício de 2022, decorrente da incidência de tributação nas operações de importação com fertilizantes e seus insumos, anteriormente isentas, cuja carga tributária foi definida de acordo com os percentuais estabelecidos pelo Convênio ICMS 26/21, de forma gradual, a partir de 2022 até 2025.;;;
+4 - A renúncia de receita do crédito presumido é basicamente a diferença entre esse montante e os créditos por aquisições informados nas declarações. Para suprir a omissão destes créditos em algumas escriturações fiscais, a SEF/MG fez ajustes desses valores, utilizando nessa proxy os valores de ICMS destacados em NFe – Notas Fiscais Eletrônicas.;;;

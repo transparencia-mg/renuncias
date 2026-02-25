@@ -1,0 +1,28 @@
+﻿montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias;unnamed_1;unnamed_2;unnamed_3
+;;;
+EXERCÍCIO DE 2023;;;
+;;;1
+TRIBUTO;MODALIDADE;NORMA AUTORIZATIVA;MONTANTE DAS PERDAS 
+NOVAS RENÚNCIAS - CONCEDIDAS EM 2023;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;25337059.720000003
+ICMS;Isenção;Decreto Nº 48.566/2023 e Decreto Nº 48.738/2023;37623944.3819272
+ICMS;Remissão;Decreto Nº 48.735/2023;15730276.1
+TOTAL ;;;78691280.2019272
+RENÚNCIAS PRÉ-EXISTENTES - ANTERIORES A 2023;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei 6763/1975;15317977706.218988
+ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;274600804.97459996
+ICMS;Anistia;Novo Regularize - Lei 22.549/2017, Regularize - Dec. 46.817/2015, Parcelamento Anistia - Lei 17.247/07 e REFIS 2021 - Lei 23.801/2021;364431430.8600045
+IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;2735548422.1651545
+IPVA;Isenção;Lei nº 14.937/2003;166594809.37
+ITCD;Anistia;Regularize - Dec. 46.817/2015 e Lei 23.801/2021;8368465.420000073
+TAXAS;Anistia;Regularize - Dec. 46.817/2015;2251016.2099999995
+TOTAL;;;18869772655.218742
+Fonte:;"Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED";;
+Elaboração: ;DIEF/SAIF/SEF-MG;;
+Notas:;;;
+1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.;;;
+Para corrigir a distorção de contribuintes que não escrituram créditos por entradas integralmente, suprindo-os por crédito presumido a maior, proporcionando renúncia superestimada, a SEF/MG compara os valores totais de créditos informados na DAPI (campo 43x3), com os totais de ICMS destacados em NFe pelos remetentes para esses beneficiados. Caso o montante dessa proxy seja superior aos créditos escriturados na DAPI, a SEF/MG deduz essa diferença da estimativa da renúncia.;;;
+Em relação ao procedimento indevido de alguns contribuintes de utilizarem campos impróprios da declaração, a SEF/MG apura o saldo devedor operacional dos créditos e débitos destacados em NFe e compara com o ICMS devido e/ou pago informado na DAPI, sendo estimada como renúncia essa eventual diferença.;;;
+2 - A SEF/MG, na eventual concessão de regime especial de tratamento tributário setorial que possa ser caracterizado como uma nova renúncia de receita de ICMS, irá adotar o dispositivo de salva guarda da arrecadação tributária, como medida de compensação de renúncia fiscal, consistente na aceitação pelo contribuinte de uma receita mínima nos exercícios seguintes, correspondente ao valor do ICMS devido a título de operação própria e substituição tributária, corretamente declarado no exercício fiscal anterior, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.;;;
+3 - Como eventual medida de compensação, cite-se o incremento de receita a partir de 2022, decorrente da incidência de tributação nas operações de importação com fertilizantes e seus insumos, anteriormente isentas, cuja carga tributária foi definida de acordo com os percentuais estabelecidos pelo Convênio ICMS 26/21, de forma gradual, a partir de 2022 até 2025.;;;
+A fundamentação legal é no sentido de que não serão afetadas as metas de resultados fiscais do setor, nos termos do inciso I, art. 14 da Lei Complementar nº 101/2000.;;;

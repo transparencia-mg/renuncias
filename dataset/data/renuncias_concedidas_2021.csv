@@ -1,0 +1,28 @@
+﻿montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia;unnamed_1;unnamed_2;unnamed_3
+;;;
+EXERCÍCIO DE 2021;;;
+;;;1
+TRIBUTO;MODALIDADE;NORMA AUTORIZATIVA;MONTANTE DAS PERDAS 
+NOVAS RENÚNCIAS - CONCEDIDAS EM 2021;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei nº 6763/1975;31201545.827456355
+ICMS;Anistia;REFIS 2021 - Lei nº 23.801/2021;2009047661.3300004
+IPVA;Anistia;REFIS 2021 - Lei nº 23.801/2021;7892333.500000004
+ITCD;Anistia;REFIS 2021 - Lei nº 23.801/2021;28372014.91999999
+TAXAS;Anistia;REFIS 2021 - Lei nº 23.801/2021;910754.65
+TOTAL ;;;2077424310.227457
+RENÚNCIAS PRÉ-EXISTENTES - ANTERIORES A 2021;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei nº 6763/1975;11367601454.264412
+ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei nº 6763/1975;76901070.2619827
+ICMS;Anistia;Novo Regularize - Lei nº 22.549/2017, Regularize - Dec. nº 46.817/2015, Parcelamento Anistia - Lei nº 17.247/2007 ;619405021.8800008
+IPVA;Benefício de natureza financeira, tributária e creditícia ;Lei nº 14.937/2003;886942414.7496868
+IPVA;Isenção;Lei nº 14.937/2003;47809190.00000063
+ITCD;Anistia;Regularize - Decreto nº 46.817/2015;3966191.7300000116
+TAXAS;Anistia;Regularize - Decreto nº 46.817/2015;1631937.609999998
+TOTAL;;;13004257280.496082
+ BENEFÍCIOS FISCAIS HETERÔNOMOS 2021;;;
+ICMS;Simples Nacional;Lei Complementar nº 123/2006;1239950649.735098
+TOTAL;;;1239950649.735098
+Fonte:;"Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED";;
+Elaboração: ;DIEF/SAIF/SEF-MG;;
+Notas:;;;
+1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.;;;

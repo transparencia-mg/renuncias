@@ -1,0 +1,27 @@
+﻿montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias;unnamed_1;unnamed_2;unnamed_3
+;;;
+EXERCÍCIO DE 2024;;;
+;;;1
+TRIBUTO;MODALIDADE;NORMA AUTORIZATIVA;MONTANTE DAS PERDAS 
+NOVAS RENÚNCIAS - CONCEDIDAS EM 2024;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia (1 e 2);Lei Complementar nº 160/2017e Convênio ICMS nº 190/17;133571864.62553526
+ICMS;REFIS 2024(3 e 4);Lei 24.612/2023 e Decreto nº 48.790/2024;1757704760.3699965
+IPVA;Isenção(3);Decreto nº 48.744/2023;577329.2799999997
+TOTAL ;;;1891853954.2755318
+RENÚNCIAS PRÉ-EXISTENTES - ANTERIORES A 2024;;;
+ICMS;Benefício de natureza financeira, tributária e creditícia;Lei Complementar nº 160/2017, Convênio ICMS 190/17, Convênio ICMS nº 03/18, Decreto nº 48.532/2022 e Lei nº 24.462/2023;17187681416.08322
+ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS nº 190/2017, Convênio ICMS nº 38/2012, Convênio ICMS nº 53/2017, Convênio ICMS nº 03/18 e Decreto nº 48.532/2022;276368820.4793769
+ICMS;Anistia;REFIS 2021 - Lei 23.801/2021, Novo Regularize - Lei 22.549/2017 e Regularize - Dec. 46.817/2015;184214726.7199996
+IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;2488932407.1
+IPVA;Isenção;Lei nº 14.937/2003;124290064.81999563
+ITCD;Anistia;Regularize - Lei 23.801/2021 e Dec. 46.817/2015;10136457.88000002
+TAXAS;Anistia;Regularize - Dec. 46.817/2015;2139675.6399999936
+TOTAL;;;20273763568.722595
+Fonte:;"Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED fev 2025";;
+Elaboração: ;DIEF/SAIF/SEF-MG;;
+Notas:;;;
+1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.;;;
+2 - A SEF/MG, na eventual concessão de regime especial de tratamento tributário setorial que possa ser caracterizado como uma nova renúncia de receita de ICMS, irá adotar o dispositivo de salva guarda da arrecadação tributária, como medida de compensação de renúncia fiscal, consistente na aceitação pelo contribuinte de uma receita mínima nos exercícios seguintes, correspondente ao valor do ICMS devido a título de operação própria e substituição tributária, corretamente declarado no exercício fiscal anterior, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.;;;
+3 - Arrecadação do ICMS relativo ao segmento de combustíveis em Minas Gerias em 2024, em razão da majoração da alíquota (dos valores de Ad rem da gasolina, do óleo diesel e de GLP a partir de 1º de fevereiro de 2024, conforme disposto no Convênios ICMS nº 172 e 173 de 20 de outubro de 2023. Valor estimado de R$1.663.807.991.;;;
+4 - Decreto nº 48.790/2024 que dispõe sobre a ampliação do prazo para pagamento do ICMS, no âmbito do Plano de Regularização do Estado de Minas Gerais, instituído pela Lei nº 24.612, de 26 de dezembro de 2023. A alteração tem efeito de renúncia estimada a ser compensada em 2025/2026 de R$ 121.622.238,46. Como medida de compensação será utilizado o produto parcial da arrecadação do ICMS relativo ao segmento de combustíveis em Minas Gerais, em razão da majoração dos valores de Ad rem da gasolina e do etanol anidro a ela adicionado, do óleo diesel e biodiesel adicionado, e de GLP, inclusive o derivado de gás natural, a partir de 1º de fevereiro de 2024, conforme disposto no Convênios ICMS nº 172 e 173 de 20 de outubro de 2023. No endereço https://www.fazenda.mg.gov.br/transparencia/renuncias/Estimativa_impacto_REFIS.pdf temos o detalhamento da renúncia decorrente desse plano de regularização da situação fiscal no Estado de Minas Gerais.;;;
+A fundamentação legal é no sentido de que não serão afetadas as metas de resultados fiscais do setor, nos termos do inciso I, art. 14 da Lei Complementar nº 101/2000.;;;
