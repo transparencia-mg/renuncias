@@ -54,6 +54,11 @@
             position: relative;
         }
 
+        /* ==================== ESPAÇAMENTO SUPERIOR IGUAL AO RODAPÉ ==================== */
+        .dashboard-top-spacing {
+            margin-top: 20px;
+        }
+
         .tab-content, .tab-pane {
             overflow: visible !important;
             height: auto !important;
@@ -130,6 +135,7 @@
             background: white; border-radius: 10px; padding: 12px;
             margin-bottom: 20px; box-shadow: 0 3px 12px rgba(0,0,0,0.06);
             overflow-x: auto; scrollbar-width: thin;
+            margin-top: 20px; /* Espaçamento superior consistente */
         }
         .nav-tabs {
             border: none !important; gap: 4px; flex-wrap: nowrap;
@@ -240,7 +246,7 @@
             background: white; border: 2px solid var(--primary-darker);
             color: var(--primary-dark); padding: 8px 15px; border-radius: 6px;
             font-weight: 600; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;
-            cursor: pointer; transition: all 0.2s ease;
+            cursor: pointer; transition: all 0.2s ease; text-decoration: none;
         }
         .btn-export:hover {
             background: var(--primary-dark); color: white; transform: translateY(-1px);
@@ -304,6 +310,7 @@
         /* ==================== DATA ATUALIZAÇÃO ==================== */
         .data-atualizacao-container {
             display: flex; justify-content: center; margin-bottom: 20px;
+            margin-top: 20px; /* Espaçamento superior consistente */
         }
         .data-atualizacao-box {
             background: white; border-radius: 8px; padding: 8px 15px;
@@ -317,10 +324,23 @@
         .card-stats {
             background: white; border-radius: 10px; padding: 15px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.06); margin-bottom: 20px;
-            text-align: center; height: 100%;
+            text-align: center; height: 100%; display: flex; flex-direction: column;
         }
         .card-stats h4 { font-size: 16px; font-weight: 700; color: var(--primary-dark); margin: 10px 0; }
-        .card-stats p { font-size: 13px; color: #6c757d; margin-bottom: 15px; }
+        .card-stats p { font-size: 13px; color: #6c757d; margin-bottom: 15px; flex-grow: 1; }
+        .card-stats .btn-export { margin-top: auto; }
+
+        /* ==================== AVISOS LEGAIS ==================== */
+        .legal-notice {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--accent-red);
+            padding: 15px;
+            font-size: 12px;
+            color: var(--primary-darker);
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .legal-notice strong { color: var(--primary-dark); }
 
         /* ==================== LOADING ==================== */
         .loading-overlay {
@@ -337,7 +357,7 @@
     </style>
 </head>
 <body>
-    <div class="container main-container">
+    <div class="container main-container dashboard-top-spacing">
 
         <!-- ==================== MENU DE NAVEGAÇÃO ==================== -->
         <div class="nav-tabs-container">
@@ -357,6 +377,7 @@
             </div>
         </div>
 
+
         <div class="tab-content">
             <!-- ========== VISÃO GERAL ========== -->
             <div class="tab-pane fade show active" id="visao-geral">
@@ -365,12 +386,26 @@
                     <div class="card-chart"><h3>Evolução Anual das Renúncias</h3><div class="chart-wrapper"><canvas id="chartEvolucao"></canvas></div></div>
                     <div class="card-chart"><h3>Composição por Tipo (Ano Mais Recente)</h3><div class="chart-wrapper"><canvas id="chartComposicao"></canvas></div></div>
                 </div>
+                
+                <!-- ==================== AVISO LEGAL ==================== -->
+                <div class="legal-notice">
+                    <strong><i class="fas fa-lock me-2"></i>Sigilo Fiscal - Art. 198 do CTN</strong>
+                    <p class="mt-2 mb-0">As informações detalhadas por beneficiário estão protegidas por sigilo fiscal, nos termos do art. 198 do Código Tributário Nacional – CTN (Lei nº 5.172/1966), o qual veda expressamente a divulgação de dados obtidos pela Administração Tributária.</p>
+                    <p class="mb-0 mt-1"><strong>Art. 198</strong> — Sem prejuízo das sanções previstas na legislação criminal, é proibida a divulgação, por parte da Fazenda Pública ou de seus servidores, de informações obtidas em razão do ofício sobre a situação econômica ou financeira do sujeito passivo ou de terceiros, bem como sobre a natureza e o estado de seus negócios ou atividades.</p>
+                    <p class="mt-2 mb-0">Dessa forma, não é permitido disponibilizar dados individualizados, garantindo a proteção das informações sensíveis e o cumprimento das normas legais de sigilo fiscal. Os valores apresentados referem-se a renúncias e desonerações, tratadas de maneira agregada, sem distinção por beneficiário.</p>
+                </div>
+                
+                <!-- ==================== METADADOS ==================== -->
                 <div class="filter-container">
-                    <h5 style="color:var(--primary-dark);">Metadados - Fonte e Notas Técnicas</h5>
-                    <div style="font-size:12px; max-height:150px; overflow-y:auto; background:#f8f9fa; padding:10px; border-radius:5px;">
+                    <h5 style="color:var(--primary-dark);"><i class="fas fa-info-circle me-2"></i>Metadados e Notas Técnicas</h5>
+                    <div style="font-size:12px; max-height:200px; overflow-y:auto; background:#f8f9fa; padding:15px; border-radius:5px;">
                         <p><strong>Fonte:</strong> Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED</p>
                         <p><strong>Elaboração:</strong> DIEF/SAIF/SEF-MG</p>
-                        <p><strong>Notas:</strong> 1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS... (demais notas disponíveis nos arquivos originais)</p>
+                        <p><strong>Notas:</strong> 1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.</p>
+                        <p>2 - A SEF/MG, na eventual concessão de regime especial de tratamento tributário setorial que possa ser caracterizado como uma nova renúncia de receita de ICMS, adota o dispositivo de salvaguarda da arrecadação tributária, como medida de compensação de renúncia fiscal, consistente na aceitação pelo contribuinte, do compromisso de efetuar um recolhimento mínimo nos exercícios seguintes, correspondente ao valor do ICMS recolhido no exercício fiscal anterior, a título de operação própria e substituição tributária, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.</p>
+                        <p>3 - A critério da SEF/MG, alternativamente ao exercício fiscal anterior, a comparação poderá ser correspondente ao valor do ICMS recolhido nos dozes meses anteriores ao mês de início de fruição do tratamento tributário, a título de operação própria e substituição tributária, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.</p>
+                        <p>4 - No caso de contribuinte com saldo credor no exercício anterior ou com a carga efetiva inferior ao percentual a ser concedido mediante regime especial, bem como em relação ao contribuinte que está iniciando as atividades no Estado, ou seja, investimento novo, a comparação será feita entre o valor recolhido no segundo período de 12 meses após o início de fruição do tratamento tributário e o valor recolhido nos primeiros 12 meses após o início de fruição deste, corrigido pela variação acumulada do IPCA, divulgado pelo IBGE.</p>
+                        <p>5 - Como medida de compensação será utilizado o produto da arrecadação do ICMS relativo ao segmento de combustíveis em Minas Gerais em razão da majoração dos valores de Ad rem da gasolina e do etanol anidro a ela adicionado, do óleo diesel e biodiesel adicionado, e de GLP, inclusive o derivado de gás natural, introduzido pela Lei Complementar nº 192/22 e Convênios ICMS nº 112 e nº 113/2025 com os novos valores de Ad rem com vigência a partir de 01/01/2026. A fundamentação legal é no sentido de que não serão afetadas as metas de resultados fiscais do setor, nos termos do inciso I, art. 14 da Lei Complementar nº 101/2000.</p>
                     </div>
                 </div>
             </div>
@@ -458,13 +493,61 @@
             <!-- ========== DOWNLOADS ========== -->
             <div class="tab-pane fade" id="downloads">
                 <div class="filter-container">
-                    <h4 style="color:var(--primary-dark);"><i class="material-icons">folder_open</i> Baixar Conjuntos de Dados</h4>
-                    <div class="row" id="downloadsGrid"></div>
-                    <div class="alert alert-info mt-3">
-                        <i class="fas fa-info-circle"></i> <strong>Fontes:</strong> 
-                        <a href="https://github.com/transparencia-mg/renuncias" target="_blank">GitHub</a> | 
-                        <a href="https://dados.mg.gov.br/" target="_blank">Dados Abertos MG</a> | 
-                        <a href="https://www.fazenda.mg.gov.br/transparencia/renuncias/" target="_blank">Portal SEFAZ</a>
+                    <h4 style="color:var(--primary-dark);"><i class="fas fa-download me-2"></i>Baixar Conjuntos de Dados</h4>
+                    <div class="row mb-4" id="downloadsGrid"></div>
+                    
+                    <h4 style="color:var(--primary-dark); margin-top: 30px;"><i class="fas fa-link me-2"></i>Links Institucionais</h4>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card-stats">
+                                <i class="fab fa-github fa-3x mb-3" style="color: var(--primary-dark);"></i>
+                                <h4>Repositório GitHub</h4>
+                                <p>Acesse o código-fonte, documentação e histórico de versões dos dados.</p>
+                                <a href="https://github.com/transparencia-mg/renuncias" target="_blank" class="btn-export w-100"><i class="fab fa-github me-2"></i> Acessar Repositório</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card-stats">
+                                <i class="fas fa-external-link-alt fa-3x mb-3" style="color: var(--primary-dark);"></i>
+                                <h4>Portal de Dados Abertos</h4>
+                                <p>Explore outros conjuntos de dados do Governo de Minas Gerais.</p>
+                                <a href="https://dados.mg.gov.br/" target="_blank" class="btn-export w-100"><i class="fas fa-external-link-alt me-2"></i> Acessar Portal</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card-stats">
+                                <i class="fas fa-university fa-3x mb-3" style="color: var(--primary-dark);"></i>
+                                <h4>Secretaria da Fazenda</h4>
+                                <p>Informações oficiais sobre renúncias fiscais no site da SEF/MG.</p>
+                                <a href="https://www.fazenda.mg.gov.br/transparencia/renuncias/" target="_blank" class="btn-export w-100"><i class="fas fa-external-link-alt me-2"></i> Acessar SEFAZ</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color:var(--primary-dark); margin-top: 30px;"><i class="fas fa-gavel me-2"></i>Legislação</h4>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card-stats">
+                                <i class="fas fa-book fa-3x mb-3" style="color: var(--primary-dark);"></i>
+                                <h4>Legislação Tributária</h4>
+                                <p>Acesse o portal completo da legislação tributária de Minas Gerais.</p>
+                                <a href="https://www.fazenda.mg.gov.br/empresas/legislacao_tributaria/index.html" target="_blank" class="btn-export w-100"><i class="fas fa-external-link-alt me-2"></i> Acessar Legislação</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card-stats">
+                                <i class="fas fa-file-alt fa-3x mb-3" style="color: var(--primary-dark);"></i>
+                                <h4>Regimes Especiais Automatizados</h4>
+                                <p>Resolução nº 5.424/2020 - Procedimentos para regimes especiais padronizados.</p>
+                                <a href="https://www.fazenda.mg.gov.br/empresas/legislacao_tributaria/resolucoes/2020/rr5424_2020.html" target="_blank" class="btn-export w-100"><i class="fas fa-external-link-alt me-2"></i> Acessar Resolução</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== AVISO LEGAL ADICIONAL ==================== -->
+                    <div class="legal-notice mt-4">
+                        <strong><i class="fas fa-lock me-2"></i>Sigilo Fiscal - Art. 198 do CTN</strong>
+                        <p class="mt-2 mb-0">As informações detalhadas por beneficiário estão protegidas por sigilo fiscal, nos termos do art. 198 do Código Tributário Nacional – CTN (Lei nº 5.172/1966). Dessa forma, não é permitido disponibilizar dados individualizados, garantindo a proteção das informações sensíveis e o cumprimento das normas legais de sigilo fiscal.</p>
                     </div>
                 </div>
             </div>
@@ -715,9 +798,9 @@
         // ==================== DOWNLOADS ====================
         function preencherDownloads() {
             document.getElementById('downloadsGrid').innerHTML = `
-                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>renuncias_concedidas.csv</h5><a href="${GITHUB_BASE}renuncias_concedidas.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
-                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>previsao_renuncias_novas.csv</h5><a href="${GITHUB_BASE}previsao_renuncias_novas.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
-                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>previsao_renuncias_pre_existentes.csv</h5><a href="${GITHUB_BASE}previsao_renuncias_pre_existentes.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
+                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>renuncias_concedidas.csv</h5><p>Registros consolidados de renúncias concedidas por ano, tributo e modalidade.</p><a href="${GITHUB_BASE}renuncias_concedidas.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
+                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>previsao_renuncias_novas.csv</h5><p>Previsões de novas renúncias com detalhamento por regional, tributo, modalidade e setor.</p><a href="${GITHUB_BASE}previsao_renuncias_novas.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
+                <div class="col-md-4 mb-3"><div class="card-stats"><i class="fas fa-file-csv fa-3x"></i><h5>previsao_renuncias_pre_existentes.csv</h5><p>Previsões de renúncias pré-existentes com detalhamento regional por tipo de benefício.</p><a href="${GITHUB_BASE}previsao_renuncias_pre_existentes.csv" target="_blank" class="btn-export w-100"><i class="fas fa-download"></i> Baixar CSV</a></div></div>
             `;
         }
 
