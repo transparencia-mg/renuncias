@@ -1,0 +1,1306 @@
+{
+  "version": "4.16.6",
+  "time": 0.375,
+  "errors": [],
+  "tasks": [
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";",
+          "skipInitialSpace": true
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_carater_nacional_2020",
+        "path": "data/previsao_renuncias_carater_nacional_2020.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_5",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_6",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_7",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "a3b1dbb180827fb50da58c77e2ea3ecf",
+          "bytes": 1785,
+          "fields": 8,
+          "rows": 18
+        }
+      },
+      "time": 0.019,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        },
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 7,
+          "rowPosition": 8,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"8\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 2
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_novas_2020",
+        "path": "data/previsao_renuncias_novas_2020.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "37ffa74088cc7e76759432f4dfa61704",
+          "bytes": 2133,
+          "fields": 5,
+          "rows": 17
+        }
+      },
+      "time": 0.014,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        },
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 3,
+          "rowPosition": 4,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"4\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 2
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_novas_2024",
+        "path": "data/previsao_renuncias_novas_2024.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "0fad44578ecbd3ee2359e98a010ac000",
+          "bytes": 2947,
+          "fields": 5,
+          "rows": 21
+        }
+      },
+      "time": 0.015,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_novas_2025",
+        "path": "data/previsao_renuncias_novas_2025.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "0811b4d1d5752c259bce90adf1a38618",
+          "bytes": 2997,
+          "fields": 5,
+          "rows": 20
+        }
+      },
+      "time": 0.014,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_pre_existentes_2020",
+        "path": "data/previsao_renuncias_pre_existentes_2020.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_5",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_6",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_7",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_8",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_9",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_10",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_11",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "6904115850d5b4f9d6ea4428bb4fd675",
+          "bytes": 3167,
+          "fields": 12,
+          "rows": 26
+        }
+      },
+      "time": 0.026,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 2,
+          "rowPosition": 3,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"3\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_pre_existentes_2024",
+        "path": "data/previsao_renuncias_pre_existentes_2024.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_5",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_6",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_7",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_8",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_9",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_10",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_11",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "ccb6823f3d8dbed11e07e295e7cd5204",
+          "bytes": 4488,
+          "fields": 12,
+          "rows": 29
+        }
+      },
+      "time": 0.026,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 2,
+          "rowPosition": 3,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"3\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "previsao_renuncias_pre_existentes_2025",
+        "path": "data/previsao_renuncias_pre_existentes_2025.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_4",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_5",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_6",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_7",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_8",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_9",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_10",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_11",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "77389933189f2ca344e0e1fc83dc4624",
+          "bytes": 4919,
+          "fields": 12,
+          "rows": 29
+        }
+      },
+      "time": 0.026,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 2,
+          "rowPosition": 3,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"3\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2020",
+        "path": "data/renuncias_concedidas_2020.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "df191a304ad1403148d72ce9c574e6cc",
+          "bytes": 4125,
+          "fields": 4,
+          "rows": 29
+        }
+      },
+      "time": 0.014,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2021",
+        "path": "data/renuncias_concedidas_2021.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "b442fd28b81e12d4b7c7e88ecb9863d1",
+          "bytes": 2309,
+          "fields": 4,
+          "rows": 27
+        }
+      },
+      "time": 0.013,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2022",
+        "path": "data/renuncias_concedidas_2022.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "23613cc5ac0b2136f0c761ede5cb8eaa",
+          "bytes": 3910,
+          "fields": 4,
+          "rows": 28
+        }
+      },
+      "time": 0.013,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2023",
+        "path": "data/renuncias_concedidas_2023.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "a1961c21b34c19ad98fe3594d086dab7",
+          "bytes": 4035,
+          "fields": 4,
+          "rows": 27
+        }
+      },
+      "time": 0.013,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2024",
+        "path": "data/renuncias_concedidas_2024.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "b49edc82676e704aba24bfe3fdcaf4dc",
+          "bytes": 4267,
+          "fields": 4,
+          "rows": 26
+        }
+      },
+      "time": 0.013,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [
+        {
+          "cells": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowNumber": 1,
+          "rowPosition": 2,
+          "code": "blank-row",
+          "name": "Blank Row",
+          "tags": [
+            "#table",
+            "#row"
+          ],
+          "note": "",
+          "message": "Row at position \"2\" is completely blank",
+          "description": "This row is empty. A row should contain at least one value."
+        }
+      ],
+      "stats": {
+        "errors": 1
+      },
+      "valid": false
+    },
+    {
+      "resource": {
+        "description": "Insira a descrição/explicação detalhada deste recurso.",
+        "dialect": {
+          "delimiter": ";"
+        },
+        "encoding": "utf-8-sig",
+        "format": "csv",
+        "hashing": "md5",
+        "name": "renuncias_concedidas_2025",
+        "path": "data/renuncias_concedidas_2025.csv",
+        "profile": "tabular-data-resource",
+        "schema": {
+          "fields": [
+            {
+              "name": "montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias",
+              "type": "string"
+            },
+            {
+              "name": "unnamed_1",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_2",
+              "type": "any"
+            },
+            {
+              "name": "unnamed_3",
+              "type": "any"
+            }
+          ]
+        },
+        "scheme": "file",
+        "title": "Insira um título humanamente legível para este recurso.",
+        "stats": {
+          "hash": "57df7432f2c949f74fc0bbd2c4c6c10a",
+          "bytes": 4435,
+          "fields": 4,
+          "rows": 26
+        }
+      },
+      "time": 0.013,
+      "scope": [
+        "hash-count-error",
+        "byte-count-error",
+        "field-count-error",
+        "row-count-error",
+        "blank-header",
+        "extra-label",
+        "missing-label",
+        "blank-label",
+        "duplicate-label",
+        "incorrect-label",
+        "blank-row",
+        "primary-key-error",
+        "foreign-key-error",
+        "extra-cell",
+        "missing-cell",
+        "type-error",
+        "constraint-error",
+        "unique-error"
+      ],
+      "partial": false,
+      "errors": [],
+      "stats": {
+        "errors": 0
+      },
+      "valid": true
+    }
+  ],
+  "stats": {
+    "errors": 12,
+    "tasks": 13
+  },
+  "valid": false
+}
