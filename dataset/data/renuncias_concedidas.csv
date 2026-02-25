@@ -1,0 +1,64 @@
+﻿ano;tipo;tributo;modalidade;norma_autorizada;montante_perdas
+2025;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio nº ICMS nº 190/2017, Lei nº  6763/1975 e Decreto nº 49.001/2025;4735811,97387341
+2025;NOVAS;ICMS;Isenção;Decreto nº 48.968/2024;14378052,731433598
+2025;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS nº 190/17, Lei nº 22.944/2018, Convênio ICMS nº 03/18, Decreto nº 48.532/2022 e Lei nº 6763/1975;9247117053,89437
+2025;PRE-EXISTENTES;ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS nº 190/2017, Convênio ICMS nº 38/2012, Convênio ICMS  nº 147/2023, Convênio ICMS nº 53/2017, Decreto nº 48.532/2022 e Lei nº 6763/1975;142128494,59440133
+2025;PRE-EXISTENTES;ICMS;Anistia;Lei 24.612/2023, REFIS 2021 - Lei nº  23.801/2021, Novo Regularize - Lei nº  22.549/2017 e Regularize - Dec. nº  46.817/2015;465782586,69000846
+2025;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;1316816313,8605902
+2025;PRE-EXISTENTES;IPVA;Isenção;Lei nº 14.937/2003;65589734,01819995
+2025;PRE-EXISTENTES;ITCD;Anistia;Regularize - Lei 23.801/2021 e Dec. 46.817/2015;4027212,4600000074
+2025;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Dec. 46.817/2015;1095492,6300000024
+2024;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1 e 2);Lei Complementar nº 160/2017e Convênio ICMS nº 190/17;133571864,62553526
+2024;NOVAS;ICMS;REFIS 2024(3 e 4);Lei 24.612/2023 e Decreto nº 48.790/2024;1757704760,3699965
+2024;NOVAS;IPVA;Isenção(3);Decreto nº 48.744/2023;577329,2799999997
+2024;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia;Lei Complementar nº 160/2017, Convênio ICMS 190/17, Convênio ICMS nº 03/18, Decreto nº 48.532/2022 e Lei nº 24.462/2023;17187681416,08322
+2024;PRE-EXISTENTES;ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS nº 190/2017, Convênio ICMS nº 38/2012, Convênio ICMS nº 53/2017, Convênio ICMS nº 03/18 e Decreto nº 48.532/2022;276368820,4793769
+2024;PRE-EXISTENTES;ICMS;Anistia;REFIS 2021 - Lei 23.801/2021, Novo Regularize - Lei 22.549/2017 e Regularize - Dec. 46.817/2015;184214726,7199996
+2024;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;2488932407,1
+2024;PRE-EXISTENTES;IPVA;Isenção;Lei nº 14.937/2003;124290064,81999563
+2024;PRE-EXISTENTES;ITCD;Anistia;Regularize - Lei 23.801/2021 e Dec. 46.817/2015;10136457,88000002
+2024;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Dec. 46.817/2015;2139675,6399999936
+2023;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;25337059,720000003
+2023;NOVAS;ICMS;Isenção;Decreto Nº 48.566/2023 e Decreto Nº 48.738/2023;37623944,3819272
+2023;NOVAS;ICMS;Remissão;Decreto Nº 48.735/2023;15730276,1
+2023;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei 6763/1975;15317977706,218988
+2023;PRE-EXISTENTES;ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;274600804,97459996
+2023;PRE-EXISTENTES;ICMS;Anistia;Novo Regularize - Lei 22.549/2017, Regularize - Dec. 46.817/2015, Parcelamento Anistia - Lei 17.247/07 e REFIS 2021 - Lei 23.801/2021;364431430,8600045
+2023;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;2735548422,1651545
+2023;PRE-EXISTENTES;IPVA;Isenção;Lei nº 14.937/2003;166594809,37
+2023;PRE-EXISTENTES;ITCD;Anistia;Regularize - Dec. 46.817/2015 e Lei 23.801/2021;8368465,420000073
+2023;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Dec. 46.817/2015;2251016,2099999995
+2022;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 3);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;24976575,540023353
+2022;NOVAS;ICMS;Remissão(3);Convênio ICMS 31/19 e Lei 6763/1975;14624489,0
+2022;NOVAS;IPVA;Isenção(3) ;Convênio ICMS 161/21 e Lei nº 14.937/2003;4782976,0
+2022;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia (1, 2 e 4);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei 6763/1975;12716864156,757729
+2022;PRE-EXISTENTES;ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei 6763/1975;230582188,99700007
+2022;PRE-EXISTENTES;ICMS;Anistia;Novo Regularize - Lei 22.549/2017, Regularize - Dec. 46.817/2015, Parcelamento Anistia - Lei 17.247/07 e REFIS 2021 - Lei 23.801/2021;978426577,0
+2022;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;1356593269,0
+2022;PRE-EXISTENTES;IPVA;Isenção;Lei nº 14.937/2003;48101596,0
+2022;PRE-EXISTENTES;IPVA;Anistia;Lei 23.801/2021;197571,0
+2022;PRE-EXISTENTES;ITCD;Anistia;Lei 23.801/2021 e Regularize - Dec. 46.817/2015 ;6257314,0
+2022;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Dec. 46.817/2015;2201661,0
+2021;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1);Lei Complementar nº 160/2017, Convênio ICMS 190/17 e Lei nº 6763/1975;31201545,827456355
+2021;NOVAS;ICMS;Anistia;REFIS 2021 - Lei nº 23.801/2021;2009047661,3300004
+2021;NOVAS;IPVA;Anistia;REFIS 2021 - Lei nº 23.801/2021;7892333,500000004
+2021;NOVAS;ITCD;Anistia;REFIS 2021 - Lei nº 23.801/2021;28372014,91999999
+2021;NOVAS;TAXAS;Anistia;REFIS 2021 - Lei nº 23.801/2021;910754,65
+2021;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia (1);Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei nº 6763/1975;11367601454,264412
+2021;PRE-EXISTENTES;ICMS;Isenção;Lei Complementar nº 160/2017, Convênio ICMS 190/17, Lei nº 22.944/2018 e Lei nº 6763/1975;76901070,2619827
+2021;PRE-EXISTENTES;ICMS;Anistia;Novo Regularize - Lei nº 22.549/2017, Regularize - Dec. nº 46.817/2015, Parcelamento Anistia - Lei nº 17.247/2007 ;619405021,8800008
+2021;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia ;Lei nº 14.937/2003;886942414,7496868
+2021;PRE-EXISTENTES;IPVA;Isenção;Lei nº 14.937/2003;47809190,00000063
+2021;PRE-EXISTENTES;ITCD;Anistia;Regularize - Decreto nº 46.817/2015;3966191,7300000116
+2021;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Decreto nº 46.817/2015;1631937,609999998
+2021;BENEFÍCIOS FISCAIS HETERÔNOMOS;ICMS;Simples Nacional;Lei Complementar nº 123/2006;1239950649,735098
+2020;NOVAS;ICMS;Benefício de natureza financeira, tributária e creditícia (1 e 2);Lei nº 6.763/75, art. nº 225 e Decreto nº 47.841/2020;16641994,372726467
+2020;PRE-EXISTENTES;ICMS;Benefício de natureza financeira, tributária e creditícia;Lei 6763/75, art. 75 e 225 e Lei Nº 22.944/2018;7157748739,511769
+2020;PRE-EXISTENTES;ICMS;Isenção;Lei 6763/75 e Decr. 47.935/2020;75459846,16319996
+2020;PRE-EXISTENTES;ICMS;Anistia;Dec 43.839/04, Lei 17.247/07, Dec 45.358/10, Regularize - Dec. 46.817/2015 e Lei 22.549/2017;527774369,61999965
+2020;PRE-EXISTENTES;IPVA;Benefício de natureza financeira, tributária e creditícia;Lei nº 14.937/2003;1044423458,9000002
+2020;PRE-EXISTENTES;IPVA;Isenção;;79838644,00000015
+2020;PRE-EXISTENTES;ITCD;Anistia;Dec 43.839/04, Regularize - Dec. 46.817/2015 e Lei 22.549/2017;3839325,17000001
+2020;PRE-EXISTENTES;TAXAS;Anistia;Regularize - Dec. 46.817/2015 e Lei 22.549/2017;634613,0799999991
+2020;BENEFÍCIOS FISCAIS HETERÔNOMOS;ICMS;Lei Kandir - perda líquida após o ressarcimento (3);Lei Complementar 87/96;7126028512,57278
+2020;BENEFÍCIOS FISCAIS HETERÔNOMOS;ICMS;Simples Nacional;Lei Complementar 123/06 de 14.12.06;1021369713,2659395
