@@ -1,0 +1,341 @@
+name: renuncias
+owner_org: ''
+profile: data-package
+resources:
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+      skipInitialSpace: true
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_carater_nacional_2020
+    path: data/previsao_renuncias_carater_nacional_2020.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+        - name: unnamed_5
+          type: any
+        - name: unnamed_6
+          type: any
+        - name: unnamed_7
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_novas_2020
+    path: data/previsao_renuncias_novas_2020.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_novas_2024
+    path: data/previsao_renuncias_novas_2024.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_novas_2025
+    path: data/previsao_renuncias_novas_2025.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_pre_existentes_2020
+    path: data/previsao_renuncias_pre_existentes_2020.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+        - name: unnamed_5
+          type: any
+        - name: unnamed_6
+          type: any
+        - name: unnamed_7
+          type: any
+        - name: unnamed_8
+          type: any
+        - name: unnamed_9
+          type: any
+        - name: unnamed_10
+          type: any
+        - name: unnamed_11
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_pre_existentes_2024
+    path: data/previsao_renuncias_pre_existentes_2024.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+        - name: unnamed_5
+          type: any
+        - name: unnamed_6
+          type: any
+        - name: unnamed_7
+          type: any
+        - name: unnamed_8
+          type: any
+        - name: unnamed_9
+          type: any
+        - name: unnamed_10
+          type: any
+        - name: unnamed_11
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: previsao_renuncias_pre_existentes_2025
+    path: data/previsao_renuncias_pre_existentes_2025.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: demonstrativo_regionalizado_do_efeito_sobre_a_receita_e_a_despesa_decorrente_de_isencao_anistia_transacao_remissao_subsidio_e_beneficio_de_natureza_financeira_tributario_e_crediticia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+        - name: unnamed_4
+          type: any
+        - name: unnamed_5
+          type: any
+        - name: unnamed_6
+          type: any
+        - name: unnamed_7
+          type: any
+        - name: unnamed_8
+          type: any
+        - name: unnamed_9
+          type: any
+        - name: unnamed_10
+          type: any
+        - name: unnamed_11
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2020
+    path: data/renuncias_concedidas_2020.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2021
+    path: data/renuncias_concedidas_2021.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2022
+    path: data/renuncias_concedidas_2022.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montante_das_perdas_nas_receitas_do_estado_de_mg_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncia
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2023
+    path: data/renuncias_concedidas_2023.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2024
+    path: data/renuncias_concedidas_2024.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+  - description: Insira a descrição/explicação detalhada deste recurso.
+    dialect:
+      delimiter: ;
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: renuncias_concedidas_2025
+    path: data/renuncias_concedidas_2025.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: montantes_das_perdas_na_receita_tributaria_do_estado_de_minas_gerais_em_decorrencia_das_desoneracoes_especificadas_por_tributos_e_modalidades_de_renuncias
+          type: string
+        - name: unnamed_1
+          type: any
+        - name: unnamed_2
+          type: any
+        - name: unnamed_3
+          type: any
+    scheme: file
+    title: Insira um título humanamente legível para este recurso.
+title: Renuncias
