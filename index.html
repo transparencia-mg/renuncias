@@ -26,7 +26,7 @@
             --hover-blue: #006a82;
         }
         
-        /* ==================== ESTILOS GERAIS - CORRIGIDO PARA IFRAME ==================== */
+        /* ==================== ESTILOS GERAIS ==================== */
         html {
             overflow-y: hidden !important;
             overflow-x: hidden !important;
@@ -54,7 +54,7 @@
             position: relative;
         }
 
-        /* ==================== ESPAÇAMENTO SUPERIOR IGUAL AO RODAPÉ ==================== */
+        /* ==================== ESPAÇAMENTO SUPERIOR ==================== */
         .dashboard-top-spacing {
             margin-top: 20px;
         }
@@ -129,13 +129,21 @@
         .metric-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
         .metric-value { font-size: 24px; font-weight: 700; color: var(--primary-dark); margin: 8px 0; }
         .metric-label { font-size: 12px; color: var(--primary-darker); font-weight: 600; text-transform: uppercase; }
+        .metric-year-badge {
+            background: var(--accent-red);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            margin-left: 8px;
+        }
         
         /* ==================== MENU DE NAVEGAÇÃO ==================== */
         .nav-tabs-container {
             background: white; border-radius: 10px; padding: 12px;
             margin-bottom: 20px; box-shadow: 0 3px 12px rgba(0,0,0,0.06);
             overflow-x: auto; scrollbar-width: thin;
-            margin-top: 20px; /* Espaçamento superior consistente */
+            margin-top: 20px;
         }
         .nav-tabs {
             border: none !important; gap: 4px; flex-wrap: nowrap;
@@ -310,7 +318,7 @@
         /* ==================== DATA ATUALIZAÇÃO ==================== */
         .data-atualizacao-container {
             display: flex; justify-content: center; margin-bottom: 20px;
-            margin-top: 20px; /* Espaçamento superior consistente */
+            margin-top: 20px;
         }
         .data-atualizacao-box {
             background: white; border-radius: 8px; padding: 8px 15px;
@@ -354,6 +362,44 @@
             border-top-color: var(--accent-red); animation: spin 1s linear infinite;
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* ==================== SUB-TABS ==================== */
+        .sub-tabs-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        .sub-tabs {
+            display: flex;
+            gap: 8px;
+            border: none;
+        }
+        .sub-tab-link {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .sub-tab-link:hover {
+            background: rgba(41,67,90,0.1);
+            color: var(--accent-red);
+        }
+        .sub-tab-link.active {
+            background: var(--primary-dark);
+            color: white;
+        }
+        .sub-tab-pane {
+            display: none;
+        }
+        .sub-tab-pane.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -377,14 +423,27 @@
             </div>
         </div>
 
-
         <div class="tab-content">
             <!-- ========== VISÃO GERAL ========== -->
             <div class="tab-pane fade show active" id="visao-geral">
+                <!-- Filtro de Ano para a Visão Geral -->
+                <div class="filter-container">
+                    <div class="row align-items-end">
+                        <div class="col-md-4">
+                            <label class="filter-label">Ano de Referência</label>
+                            <select class="form-select" id="anoVisaoGeral"></select>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="text-muted mb-0" style="font-size:12px;"><i class="fas fa-info-circle me-1"></i>Selecione o ano para atualizar as métricas e o gráfico de composição</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row mb-4" id="summaryCardsGeral"></div>
+                
                 <div class="dashboard-2">
                     <div class="card-chart"><h3>Evolução Anual das Renúncias</h3><div class="chart-wrapper"><canvas id="chartEvolucao"></canvas></div></div>
-                    <div class="card-chart"><h3>Composição por Tipo (Ano Mais Recente)</h3><div class="chart-wrapper"><canvas id="chartComposicao"></canvas></div></div>
+                    <div class="card-chart"><h3>Composição por Tipo <span id="anoComposicao" style="color:var(--accent-red);"></span></h3><div class="chart-wrapper"><canvas id="chartComposicao"></canvas></div></div>
                 </div>
                 
                 <!-- ==================== AVISO LEGAL ==================== -->
@@ -414,35 +473,103 @@
             <div class="tab-pane fade" id="previsao">
                 <div class="filter-container">
                     <div class="row">
-                        <div class="col-md-4"><label class="filter-label">Ano</label><select class="form-select" id="anoPrevisao"></select></div>
-                        <div class="col-md-4"><label class="filter-label">Tipo</label><select class="form-select" id="tipoPrevisao"><option value="todas">Todas</option><option value="novas">Renúncias Novas</option><option value="pre">Pré-existentes</option></select></div>
-                    </div>
-                </div>
-                <div class="actions-container">
-                    <div class="export-buttons">
-                        <button class="btn-export" id="exportCSVPrevisao"><i class="fas fa-file-csv"></i> Exportar CSV</button>
-                        <div class="share-dropdown">
-                            <button class="btn-share" id="sharePrevisao"><i class="fas fa-share-alt"></i> Compartilhar</button>
-                            <div class="share-options">
-                                <button class="share-option" onclick="copiarLink()"><i class="fas fa-link"></i> Copiar Link</button>
-                                <button class="share-option" onclick="compartilharFacebook(event)"><i class="fab fa-facebook-f"></i> Facebook</button>
-                                <button class="share-option" onclick="compartilharTwitter(event)"><i class="fab fa-twitter"></i> Twitter</button>
-                                <button class="share-option" onclick="compartilharLinkedIn(event)"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
-                                <button class="share-option" onclick="compartilharWhatsApp(event)"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-                            </div>
+                        <div class="col-md-4">
+                            <label class="filter-label">Ano</label>
+                            <select class="form-select" id="anoPrevisao"></select>
                         </div>
                     </div>
-                    <div class="right-aligned-container">
-                        <span class="table-badge" id="countPrevisao">0 registros</span>
+                </div>
+
+                <!-- Sub-tabs para Previsão -->
+                <div class="sub-tabs-container">
+                    <div class="sub-tabs">
+                        <button class="sub-tab-link active" data-sub-tab="previsao-novas">Renúncias Novas</button>
+                        <button class="sub-tab-link" data-sub-tab="previsao-pre">Renúncias Pré-existentes</button>
                     </div>
                 </div>
-                <div class="table-container">
-                    <div class="table-fixed-header-container">
-                        <table class="table" id="tabelaPrevisao">
-                            <thead id="theadPrevisao"></thead>
-                            <tbody id="tbodyPrevisao"></tbody>
-                            <tfoot id="tfootPrevisao"></tfoot>
-                        </table>
+
+                <!-- Painel Renúncias Novas -->
+                <div class="sub-tab-pane active" id="previsao-novas">
+                    <div class="actions-container">
+                        <div class="export-buttons">
+                            <button class="btn-export" id="exportCSVPrevisaoNovas"><i class="fas fa-file-csv"></i> Exportar CSV</button>
+                            <div class="share-dropdown">
+                                <button class="btn-share"><i class="fas fa-share-alt"></i> Compartilhar</button>
+                                <div class="share-options">
+                                    <button class="share-option" onclick="copiarLink()"><i class="fas fa-link"></i> Copiar Link</button>
+                                    <button class="share-option" onclick="compartilharFacebook(event)"><i class="fab fa-facebook-f"></i> Facebook</button>
+                                    <button class="share-option" onclick="compartilharTwitter(event)"><i class="fab fa-twitter"></i> Twitter</button>
+                                    <button class="share-option" onclick="compartilharLinkedIn(event)"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+                                    <button class="share-option" onclick="compartilharWhatsApp(event)"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-aligned-container">
+                            <span class="table-badge" id="countPrevisaoNovas">0 registros</span>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-fixed-header-container">
+                            <table class="table" id="tabelaPrevisaoNovas">
+                                <thead>
+                                    <tr>
+                                        <th>Regional</th>
+                                        <th>Tributo</th>
+                                        <th>Modalidade</th>
+                                        <th>Setor/Programa</th>
+                                        <th class="valor-monetario">Valor (R$)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyPrevisaoNovas"></tbody>
+                                <tfoot id="tfootPrevisaoNovas"></tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel Renúncias Pré-existentes -->
+                <div class="sub-tab-pane" id="previsao-pre">
+                    <div class="actions-container">
+                        <div class="export-buttons">
+                            <button class="btn-export" id="exportCSVPrevisaoPre"><i class="fas fa-file-csv"></i> Exportar CSV</button>
+                            <div class="share-dropdown">
+                                <button class="btn-share"><i class="fas fa-share-alt"></i> Compartilhar</button>
+                                <div class="share-options">
+                                    <button class="share-option" onclick="copiarLink()"><i class="fas fa-link"></i> Copiar Link</button>
+                                    <button class="share-option" onclick="compartilharFacebook(event)"><i class="fab fa-facebook-f"></i> Facebook</button>
+                                    <button class="share-option" onclick="compartilharTwitter(event)"><i class="fab fa-twitter"></i> Twitter</button>
+                                    <button class="share-option" onclick="compartilharLinkedIn(event)"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+                                    <button class="share-option" onclick="compartilharWhatsApp(event)"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-aligned-container">
+                            <span class="table-badge" id="countPrevisaoPre">0 registros</span>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-fixed-header-container">
+                            <table class="table" id="tabelaPrevisaoPre">
+                                <thead>
+                                    <tr>
+                                        <th>Regional</th>
+                                        <th class="valor-monetario">ICMS Isenção</th>
+                                        <th class="valor-monetario">ICMS Redução Base</th>
+                                        <th class="valor-monetario">ICMS Redução Alíquota</th>
+                                        <th class="valor-monetario">ICMS Crédito Presumido</th>
+                                        <th class="valor-monetario">ICMS Incentivo Cultura</th>
+                                        <th class="valor-monetario">ICMS SUFRAMA</th>
+                                        <th class="valor-monetario">ICMS Anistia</th>
+                                        <th class="valor-monetario">IPVA Isenção</th>
+                                        <th class="valor-monetario">IPVA Redução Alíquota</th>
+                                        <th class="valor-monetario">ITCD Anistia</th>
+                                        <th class="valor-monetario">Taxa Anistia</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyPrevisaoPre"></tbody>
+                                <tfoot id="tfootPrevisaoPre"></tfoot>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -460,7 +587,7 @@
                     <div class="export-buttons">
                         <button class="btn-export" id="exportCSVConcedidas"><i class="fas fa-file-csv"></i> Exportar CSV</button>
                         <div class="share-dropdown">
-                            <button class="btn-share" id="shareConcedidas"><i class="fas fa-share-alt"></i> Compartilhar</button>
+                            <button class="btn-share"><i class="fas fa-share-alt"></i> Compartilhar</button>
                             <div class="share-options">
                                 <button class="share-option" onclick="copiarLink()"><i class="fas fa-link"></i> Copiar Link</button>
                                 <button class="share-option" onclick="compartilharFacebook(event)"><i class="fab fa-facebook-f"></i> Facebook</button>
@@ -601,6 +728,7 @@
         let currentPage = { concedidas: 1 };
         let itemsPerPage = { concedidas: 50 };
         let charts = {};
+        let anoVisaoGeralSelecionado = null;
 
         function showLoading(show) { document.getElementById('loadingOverlay').style.display = show ? 'flex' : 'none'; }
         function updateDataAtualizacao() { document.getElementById('data-atualizacao-central').textContent = new Date().toLocaleString('pt-BR'); }
@@ -663,9 +791,42 @@
 
                 filteredConcedidas = [...dadosConcedidas];
                 preencherFiltros();
+                
+                // Define o ano mais recente como padrão para visão geral
+                const anos = [...new Set(dadosConcedidas.map(d => d.ano))].sort().reverse();
+                anoVisaoGeralSelecionado = anos[0] || null;
+                if (document.getElementById('anoVisaoGeral')) {
+                    document.getElementById('anoVisaoGeral').value = anoVisaoGeralSelecionado;
+                }
+                
                 atualizarTudo();
                 preencherDownloads();
+                initSubTabs();
             } catch (e) { console.error(e); } finally { showLoading(false); iframeUpdateHeight(); }
+        }
+
+        // ==================== SUB-TABS ====================
+        function initSubTabs() {
+            document.querySelectorAll('.sub-tab-link').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Remove active de todos
+                    document.querySelectorAll('.sub-tab-link').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.sub-tab-pane').forEach(p => p.classList.remove('active'));
+                    
+                    // Ativa o clicado
+                    btn.classList.add('active');
+                    const target = btn.getAttribute('data-sub-tab');
+                    document.getElementById(target).classList.add('active');
+                    
+                    // Atualiza as tabelas
+                    if (target === 'previsao-novas') {
+                        preencherTabelaPrevisaoNovas();
+                    } else {
+                        preencherTabelaPrevisaoPre();
+                    }
+                    iframeUpdateHeight();
+                });
+            });
         }
 
         // ==================== INTERFACE ====================
@@ -673,22 +834,43 @@
             atualizarCardsVisaoGeral();
             atualizarGraficos();
             atualizarTabelaConcedidas();
-            preencherTabelaPrevisao();
+            preencherTabelaPrevisaoNovas();
+            preencherTabelaPrevisaoPre();
         }
 
         function atualizarCardsVisaoGeral() {
-            const anos = [...new Set(dadosConcedidas.map(d => d.ano))].sort().reverse();
-            const anoRecente = anos[0] || 2025;
-            const totalRecente = dadosConcedidas.filter(d => d.ano == anoRecente).reduce((s, d) => s + d.valor, 0);
-            const totalNovas = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'NOVAS').reduce((s, d) => s + d.valor, 0);
-            const totalPre = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'PRE-EXISTENTES').reduce((s, d) => s + d.valor, 0);
-            const totalHetero = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'BENEFÍCIOS FISCAIS HETERÔNOMOS').reduce((s, d) => s + d.valor, 0);
+            if (!anoVisaoGeralSelecionado) return;
+            
+            const totalRecente = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado).reduce((s, d) => s + d.valor, 0);
+            const totalNovas = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'NOVAS').reduce((s, d) => s + d.valor, 0);
+            const totalPre = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'PRE-EXISTENTES').reduce((s, d) => s + d.valor, 0);
+            const totalHetero = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'BENEFÍCIOS FISCAIS HETERÔNOMOS').reduce((s, d) => s + d.valor, 0);
             
             document.getElementById('summaryCardsGeral').innerHTML = `
-                <div class="col-md-3"><div class="metric-card primary"><div class="metric-label">Total Concedido ${anoRecente}</div><div class="metric-value">${formatarMoeda(totalRecente)}</div></div></div>
-                <div class="col-md-3"><div class="metric-card success"><div class="metric-label">Renúncias Novas</div><div class="metric-value">${formatarMoeda(totalNovas)}</div></div></div>
-                <div class="col-md-3"><div class="metric-card info"><div class="metric-label">Pré-existentes</div><div class="metric-value">${formatarMoeda(totalPre)}</div></div></div>
-                <div class="col-md-3"><div class="metric-card warning"><div class="metric-label">Heterônomos</div><div class="metric-value">${formatarMoeda(totalHetero)}</div></div></div>
+                <div class="col-md-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Total Concedido <span class="metric-year-badge">${anoVisaoGeralSelecionado}</span></div>
+                        <div class="metric-value">${formatarMoeda(totalRecente)}</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Renúncias Novas <span class="metric-year-badge">${anoVisaoGeralSelecionado}</span></div>
+                        <div class="metric-value">${formatarMoeda(totalNovas)}</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Pré-existentes <span class="metric-year-badge">${anoVisaoGeralSelecionado}</span></div>
+                        <div class="metric-value">${formatarMoeda(totalPre)}</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="metric-card">
+                        <div class="metric-label">Heterônomos <span class="metric-year-badge">${anoVisaoGeralSelecionado}</span></div>
+                        <div class="metric-value">${formatarMoeda(totalHetero)}</div>
+                    </div>
+                </div>
             `;
         }
 
@@ -698,44 +880,161 @@
                 if (charts.evol) charts.evol.destroy();
                 const anos = [...new Set(dadosConcedidas.map(d => d.ano))].sort();
                 const totais = anos.map(a => dadosConcedidas.filter(d => d.ano == a).reduce((s, d) => s + d.valor, 0));
-                charts.evol = new Chart(ctxEvol, { type: 'line', data: { labels: anos, datasets: [{ data: totais, borderColor: '#29435A', backgroundColor: '#29435A33', fill: true }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+                charts.evol = new Chart(ctxEvol, { 
+                    type: 'line', 
+                    data: { 
+                        labels: anos, 
+                        datasets: [{ 
+                            data: totais, 
+                            borderColor: '#29435A', 
+                            backgroundColor: '#29435A33', 
+                            fill: true,
+                            tension: 0.1
+                        }] 
+                    }, 
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        plugins: { 
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => 'R$ ' + ctx.raw.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: (value) => 'R$ ' + (value/1e6).toFixed(1) + 'M'
+                                }
+                            }
+                        }
+                    } 
+                });
             }
+            
+            atualizarGraficoComposicao();
+        }
+
+        function atualizarGraficoComposicao() {
             const ctxComp = document.getElementById('chartComposicao')?.getContext('2d');
-            if (ctxComp && dadosConcedidas.length) {
+            if (ctxComp && dadosConcedidas.length && anoVisaoGeralSelecionado) {
                 if (charts.comp) charts.comp.destroy();
-                const anos = [...new Set(dadosConcedidas.map(d => d.ano))].sort();
-                const anoRecente = anos[anos.length-1];
-                const novas = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'NOVAS').reduce((s, d) => s + d.valor, 0);
-                const pre = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'PRE-EXISTENTES').reduce((s, d) => s + d.valor, 0);
-                const hetero = dadosConcedidas.filter(d => d.ano == anoRecente && d.tipo === 'BENEFÍCIOS FISCAIS HETERÔNOMOS').reduce((s, d) => s + d.valor, 0);
-                charts.comp = new Chart(ctxComp, { type: 'doughnut', data: { labels: ['Novas', 'Pré-existentes', 'Heterônomos'], datasets: [{ data: [novas, pre, hetero], backgroundColor: ['#B93C42', '#29435A', '#20B2AA'] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } } });
+                
+                document.getElementById('anoComposicao').textContent = `- ${anoVisaoGeralSelecionado}`;
+                
+                const novas = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'NOVAS').reduce((s, d) => s + d.valor, 0);
+                const pre = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'PRE-EXISTENTES').reduce((s, d) => s + d.valor, 0);
+                const hetero = dadosConcedidas.filter(d => d.ano == anoVisaoGeralSelecionado && d.tipo === 'BENEFÍCIOS FISCAIS HETERÔNOMOS').reduce((s, d) => s + d.valor, 0);
+                
+                charts.comp = new Chart(ctxComp, { 
+                    type: 'doughnut', 
+                    data: { 
+                        labels: ['Novas', 'Pré-existentes', 'Heterônomos'], 
+                        datasets: [{ 
+                            data: [novas, pre, hetero], 
+                            backgroundColor: ['#B93C42', '#29435A', '#20B2AA'],
+                            borderWidth: 0
+                        }] 
+                    }, 
+                    options: { 
+                        responsive: true, 
+                        maintainAspectRatio: false, 
+                        plugins: { 
+                            legend: { position: 'bottom' },
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => {
+                                        const total = ctx.dataset.data.reduce((a,b) => a + b, 0);
+                                        const percentage = ((ctx.raw / total) * 100).toFixed(1);
+                                        return `${ctx.label}: R$ ${ctx.raw.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})} (${percentage}%)`;
+                                    }
+                                }
+                            }
+                        } 
+                    } 
+                });
             }
         }
 
-        // ==================== TABELA PREVISÃO ====================
-        function preencherTabelaPrevisao() {
+        // ==================== TABELA PREVISÃO NOVAS ====================
+        function preencherTabelaPrevisaoNovas() {
             const ano = document.getElementById('anoPrevisao')?.value;
-            const tipo = document.getElementById('tipoPrevisao')?.value;
-            let dados = [];
-            if (tipo === 'todas' || tipo === 'novas') dados = dados.concat(dadosPrevisaoNovas.filter(d => !ano || d.ano == ano));
-            if (tipo === 'todas' || tipo === 'pre') dados = dados.concat(dadosPrevisaoPre.filter(d => !ano || d.ano == ano));
+            let dados = dadosPrevisaoNovas.filter(d => !ano || d.ano == ano);
 
-            const thead = document.getElementById('theadPrevisao');
-            const tbody = document.getElementById('tbodyPrevisao');
-            const tfoot = document.getElementById('tfootPrevisao');
-            document.getElementById('countPrevisao').textContent = `${dados.length} registros`;
+            const tbody = document.getElementById('tbodyPrevisaoNovas');
+            const tfoot = document.getElementById('tfootPrevisaoNovas');
+            document.getElementById('countPrevisaoNovas').textContent = `${dados.length} registros`;
 
-            if (tipo === 'pre' && dados.some(d => d.icms_isencao !== undefined)) {
-                thead.innerHTML = '<tr><th>Regional</th><th>ICMS Isenção</th><th>ICMS Crédito</th><th>ICMS Anistia</th><th>IPVA Isenção</th><th>ITCD Anistia</th><th>Taxa Anistia</th></tr>';
-                tbody.innerHTML = dados.map(d => `<tr><td>${d.regionalizacao}</td><td class="valor-monetario">${formatarMoeda(d.icms_isencao)}</td><td class="valor-monetario">${formatarMoeda(d.icms_credito)}</td><td class="valor-monetario">${formatarMoeda(d.icms_anistia)}</td><td class="valor-monetario">${formatarMoeda(d.ipva_isencao)}</td><td class="valor-monetario">${formatarMoeda(d.itcd_anistia)}</td><td class="valor-monetario">${formatarMoeda(d.taxa_anistia)}</td></tr>`).join('');
-                const totais = dados.reduce((s, d) => { s.i1+=d.icms_isencao; s.i2+=d.icms_credito; s.i3+=d.icms_anistia; s.i4+=d.ipva_isencao; s.i5+=d.itcd_anistia; s.i6+=d.taxa_anistia; return s; }, {i1:0,i2:0,i3:0,i4:0,i5:0,i6:0});
-                tfoot.innerHTML = `<tr class="table-total-row"><td>TOTAL</td><td class="valor-monetario">${formatarMoeda(totais.i1)}</td><td class="valor-monetario">${formatarMoeda(totais.i2)}</td><td class="valor-monetario">${formatarMoeda(totais.i3)}</td><td class="valor-monetario">${formatarMoeda(totais.i4)}</td><td class="valor-monetario">${formatarMoeda(totais.i5)}</td><td class="valor-monetario">${formatarMoeda(totais.i6)}</td></tr>`;
-            } else {
-                thead.innerHTML = '<tr><th>Regional</th><th>Tributo</th><th>Modalidade</th><th>Setor</th><th class="valor-monetario">Valor (R$)</th></tr>';
-                tbody.innerHTML = dados.map(d => `<tr><td>${d.regionalizacao}</td><td>${d.tributo}</td><td>${d.modalidade}</td><td>${d.setor || '-'}</td><td class="valor-monetario">${formatarMoeda(d.valor)}</td></tr>`).join('');
-                const total = dados.reduce((s, d) => s + (d.valor || 0), 0);
-                tfoot.innerHTML = `<tr class="table-total-row"><td colspan="4" class="text-end">TOTAL</td><td class="valor-monetario">${formatarMoeda(total)}</td></tr>`;
-            }
+            tbody.innerHTML = dados.map(d => `<tr>
+                <td>${d.regionalizacao}</td>
+                <td>${d.tributo}</td>
+                <td>${d.modalidade}</td>
+                <td>${d.setor || '-'}</td>
+                <td class="valor-monetario">${formatarMoeda(d.valor)}</td>
+            </tr>`).join('');
+
+            const total = dados.reduce((s, d) => s + (d.valor || 0), 0);
+            tfoot.innerHTML = `<tr class="table-total-row">
+                <td colspan="4" class="text-end">TOTAL</td>
+                <td class="valor-monetario">${formatarMoeda(total)}</td>
+            </tr>`;
+        }
+
+        // ==================== TABELA PREVISÃO PRÉ-EXISTENTES ====================
+        function preencherTabelaPrevisaoPre() {
+            const ano = document.getElementById('anoPrevisao')?.value;
+            let dados = dadosPrevisaoPre.filter(d => !ano || d.ano == ano);
+
+            const tbody = document.getElementById('tbodyPrevisaoPre');
+            const tfoot = document.getElementById('tfootPrevisaoPre');
+            document.getElementById('countPrevisaoPre').textContent = `${dados.length} registros`;
+
+            tbody.innerHTML = dados.map(d => `<tr>
+                <td>${d.regionalizacao}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_isencao)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_reducao_base)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_reducao_aliquota)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_credito)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_incentivo_cultura)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_suframa)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.icms_anistia)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.ipva_isencao)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.ipva_reducao_aliquota)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.itcd_anistia)}</td>
+                <td class="valor-monetario">${formatarMoeda(d.taxa_anistia)}</td>
+            </tr>`).join('');
+
+            const totais = dados.reduce((s, d) => { 
+                s.i1 += d.icms_isencao; 
+                s.i2 += d.icms_reducao_base;
+                s.i3 += d.icms_reducao_aliquota;
+                s.i4 += d.icms_credito;
+                s.i5 += d.icms_incentivo_cultura;
+                s.i6 += d.icms_suframa;
+                s.i7 += d.icms_anistia;
+                s.i8 += d.ipva_isencao;
+                s.i9 += d.ipva_reducao_aliquota;
+                s.i10 += d.itcd_anistia;
+                s.i11 += d.taxa_anistia;
+                return s; 
+            }, {i1:0,i2:0,i3:0,i4:0,i5:0,i6:0,i7:0,i8:0,i9:0,i10:0,i11:0});
+
+            tfoot.innerHTML = `<tr class="table-total-row">
+                <td>TOTAL</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i1)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i2)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i3)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i4)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i5)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i6)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i7)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i8)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i9)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i10)}</td>
+                <td class="valor-monetario">${formatarMoeda(totais.i11)}</td>
+            </tr>`;
         }
 
         // ==================== TABELA CONCEDIDAS ====================
@@ -776,13 +1075,34 @@
             
             const anosPrev = [...new Set([...dadosPrevisaoNovas.map(d => d.ano), ...dadosPrevisaoPre.map(d => d.ano)])].sort().reverse();
             document.getElementById('anoPrevisao').innerHTML = '<option value="">Todos</option>' + anosPrev.map(a => `<option value="${a}">${a}</option>`).join('');
+            
+            // Filtro da Visão Geral
+            document.getElementById('anoVisaoGeral').innerHTML = anosConc.map(a => `<option value="${a}">${a}</option>`).join('');
 
-            document.getElementById('anoPrevisao').addEventListener('change', preencherTabelaPrevisao);
-            document.getElementById('tipoPrevisao').addEventListener('change', preencherTabelaPrevisao);
+            // Event Listeners
+            document.getElementById('anoPrevisao').addEventListener('change', () => {
+                // Verifica qual sub-tab está ativa e atualiza a tabela correspondente
+                if (document.getElementById('previsao-novas').classList.contains('active')) {
+                    preencherTabelaPrevisaoNovas();
+                } else {
+                    preencherTabelaPrevisaoPre();
+                }
+            });
+            
+            document.getElementById('anoVisaoGeral').addEventListener('change', (e) => {
+                anoVisaoGeralSelecionado = e.target.value;
+                atualizarCardsVisaoGeral();
+                atualizarGraficoComposicao();
+            });
+            
             document.getElementById('anoConcedidas').addEventListener('change', filtrarConcedidas);
             document.getElementById('tributoConcedidas').addEventListener('change', filtrarConcedidas);
             document.getElementById('tipoConcedidas').addEventListener('change', filtrarConcedidas);
-            document.getElementById('itemsPerPageConcedidas').addEventListener('change', (e) => { itemsPerPage.concedidas = parseInt(e.target.value); currentPage.concedidas = 1; atualizarTabelaConcedidas(); });
+            document.getElementById('itemsPerPageConcedidas').addEventListener('change', (e) => { 
+                itemsPerPage.concedidas = parseInt(e.target.value); 
+                currentPage.concedidas = 1; 
+                atualizarTabelaConcedidas(); 
+            });
         }
 
         function filtrarConcedidas() {
@@ -805,14 +1125,20 @@
         }
 
         // ==================== EXPORTAÇÃO ====================
-        document.getElementById('exportCSVConcedidas')?.addEventListener('click', () => { saveAs(new Blob(["\ufeff" + Papa.unparse(filteredConcedidas)], {type:"text/csv"}), "renuncias_concedidas_filtradas.csv"); });
-        document.getElementById('exportCSVPrevisao')?.addEventListener('click', () => {
+        document.getElementById('exportCSVConcedidas')?.addEventListener('click', () => { 
+            saveAs(new Blob(["\ufeff" + Papa.unparse(filteredConcedidas)], {type:"text/csv"}), "renuncias_concedidas_filtradas.csv"); 
+        });
+        
+        document.getElementById('exportCSVPrevisaoNovas')?.addEventListener('click', () => {
             const ano = document.getElementById('anoPrevisao')?.value;
-            const tipo = document.getElementById('tipoPrevisao')?.value;
-            let dados = [];
-            if (tipo === 'todas' || tipo === 'novas') dados = dados.concat(dadosPrevisaoNovas.filter(d => !ano || d.ano == ano));
-            if (tipo === 'todas' || tipo === 'pre') dados = dados.concat(dadosPrevisaoPre.filter(d => !ano || d.ano == ano));
-            saveAs(new Blob(["\ufeff" + Papa.unparse(dados)], {type:"text/csv"}), "previsao_renuncias_filtradas.csv");
+            let dados = dadosPrevisaoNovas.filter(d => !ano || d.ano == ano);
+            saveAs(new Blob(["\ufeff" + Papa.unparse(dados)], {type:"text/csv"}), "previsao_renuncias_novas.csv");
+        });
+
+        document.getElementById('exportCSVPrevisaoPre')?.addEventListener('click', () => {
+            const ano = document.getElementById('anoPrevisao')?.value;
+            let dados = dadosPrevisaoPre.filter(d => !ano || d.ano == ano);
+            saveAs(new Blob(["\ufeff" + Papa.unparse(dados)], {type:"text/csv"}), "previsao_renuncias_pre_existentes.csv");
         });
 
         // ==================== INICIALIZAÇÃO ====================
