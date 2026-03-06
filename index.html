@@ -81,25 +81,7 @@
             position: relative;
         }
         
-        /* ==================== HEADER ==================== */
-        .main-header {
-            background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 12px 0;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-bottom: 3px solid var(--accent-red);
-        }
-        .logo-container { display: flex; align-items: center; gap: 10px; }
-        .logo {
-            width: 45px; height: 45px;
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-bright));
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-weight: bold;
-        }
-        .header-title { font-weight: 700; font-size: 18px; margin: 0; }
-        
+      
         /* ==================== FILTROS ==================== */
         .filter-container {
             background: white; border-radius: 10px;
@@ -108,11 +90,11 @@
         }
         .filter-label {
             font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;
-            font-size: 15px; text-transform: uppercase; letter-spacing: 0.3px;
+            font-size: 18px; text-transform: uppercase; letter-spacing: 0.3px;
         }
         .form-control, .form-select {
             border: 2px solid #e9ecef; border-radius: 6px;
-            padding: 10px 12px; font-size: 15px; height: 42px;
+            padding: 10px 12px; font-size: 18px; height: 42px;
         }
         .form-control:focus, .form-select:focus {
             border-color: var(--accent-red);
@@ -201,13 +183,13 @@
         .table thead th {
             background-color: var(--primary-dark) !important;
             color: white !important; font-weight: 600; padding: 12px 10px;
-            font-size: 12px; text-transform: uppercase; white-space: nowrap;
+            font-size: 15px; text-transform: uppercase; white-space: nowrap;
             border-left: 1px solid rgba(255,255,255,0.2);
             border-right: 1px solid rgba(255,255,255,0.2);
         }
         .table thead th:first-child { border-left: none; }
         .table thead th:last-child { border-right: none; }
-        .table tbody td { padding: 12px 10px; font-size: 13px; border-bottom: 1px solid #f1f1f1; }
+        .table tbody td { padding: 12px 10px; font-size: 15px; border-bottom: 1px solid #f1f1f1; }
         .table tbody tr:hover { background-color: rgba(41,67,90,0.04); }
         .valor-monetario { font-weight: 600; text-align: right; white-space: nowrap; }
         .table-total-row { background-color: #f8f9fa !important; font-weight: 600; }
@@ -262,7 +244,7 @@
         .btn-share {
             background: white; border: 2px solid var(--primary-darker);
             color: var(--primary-dark); padding: 8px 15px; border-radius: 6px;
-            font-weight: 600; font-size: 12px; display: inline-flex; align-items: center; gap: 6px;
+            font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 6px;
             cursor: pointer;
         }
         .btn-share:hover { background: var(--primary-dark); color: white; }
@@ -323,7 +305,7 @@
         .data-atualizacao-box {
             background: white; border-radius: 8px; padding: 8px 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            display: flex; align-items: center; gap: 8px;
+            display: flex; align-items: left; gap: 8px;
             font-size: 12px; color: var(--primary-dark); font-weight: 600;
         }
         .data-atualizacao-box i { color: var(--accent-red); }
@@ -343,7 +325,7 @@
             background-color: #f8f9fa;
             border-left: 4px solid var(--accent-red);
             padding: 15px;
-            font-size: 13px;
+            font-size: 15px;
             color: var(--primary-darker);
             margin-bottom: 20px;
             border-radius: 0 8px 8px 0;
@@ -434,7 +416,7 @@
                             <select class="form-select" id="anoVisaoGeral"></select>
                         </div>
                         <div class="col-md-8">
-                            <p class="text-muted mb-0" style="font-size:13px;"><i class="fas fa-info-circle me-1"></i>Selecione o ano para atualizar as métricas e o gráfico de composição</p>
+                            <p class="text-muted mb-0" style="font-size:13px;"><></i> </p>
                         </div>
                     </div>
                 </div>
@@ -457,7 +439,7 @@
                 <!-- ==================== METADADOS ==================== -->
                 <div class="filter-container">
                     <h5 style="color:var(--primary-dark);"><i class="fas fa-info-circle me-2"></i>Metadados e Notas Técnicas</h5>
-                    <div style="font-size:12px; max-height:200px; overflow-y:auto; background:#f8f9fa; padding:15px; border-radius:5px;">
+                    <div style="font-size:15px; max-height:200px; overflow-y:auto; background:#f8f9fa; padding:15px; border-radius:5px;">
                         <p><strong>Fonte:</strong> Dados do Armazém Cognos e SAS - SAIF/DIEF; SICAF/MG - SUCRED</p>
                         <p><strong>Elaboração:</strong> DIEF/SAIF/SEF-MG</p>
                         <p><strong>Notas:</strong> 1 - Para a quantificação das renúncias fiscais do ICMS formalizadas em regimes especiais, a SEF/MG agrega e consolida por núcleo de CNPJ, os dados informados pelos contribuintes na DAPI - Declaração de Apuração do ICMS, Portaria SRE-117/2013, modalidade de autolançamento do imposto, e complementa eventualmente com os dados dos demais documentos eletrônicos emitidos pelos mesmos. Essas informações estão sujeitas à revisão fiscal no prazo decadencial de 5 anos.</p>
@@ -625,14 +607,6 @@
                     
                     <h4 style="color:var(--primary-dark); margin-top: 30px;"><i class="fas fa-link me-2"></i>Links Institucionais</h4>
                     <div class="row">
-                        <div class="col-md-4 mb-3">
-                            <div class="card-stats">
-                                <i class="fab fa-github fa-3x mb-3" style="color: var(--primary-dark);"></i>
-                                <h4>Repositório GitHub</h4>
-                                <p>Acesse o código-fonte, documentação e histórico de versões dos dados.</p>
-                                <a href="https://github.com/transparencia-mg/renuncias" target="_blank" class="btn-export w-100"><i class="fab fa-github me-2"></i> Acessar Repositório</a>
-                            </div>
-                        </div>
                         <div class="col-md-4 mb-3">
                             <div class="card-stats">
                                 <i class="fas fa-external-link-alt fa-3x mb-3" style="color: var(--primary-dark);"></i>
