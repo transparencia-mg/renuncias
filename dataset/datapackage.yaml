@@ -1,5 +1,5 @@
 name: renuncias
-owner_org: ''
+owner_org: 'controladoria-geral-do-estado-cge'
 profile: data-package
 resources:
   - description: Insira a descrição/explicação detalhada deste recurso.
@@ -338,4 +338,4 @@ resources:
           type: any
     scheme: file
     title: Insira um título humanamente legível para este recurso.
-title: Renuncias
+title: Renúncias e Desonerações
