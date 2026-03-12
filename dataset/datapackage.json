@@ -1,0 +1,166 @@
+{
+  "name": "portal_renuncias_desoneracoes",
+  "owner_org": "secretaria-de-estado-de-fazenda",
+  "profile": "data-package",
+  "resources": [
+    {
+      "description": "Insira a descrição/explicação detalhada deste recurso.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "previsao_renuncias_novas",
+      "path": "data/previsao_renuncias_novas.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer"
+          },
+          {
+            "name": "regionalizacao",
+            "type": "string"
+          },
+          {
+            "name": "tributo",
+            "type": "string"
+          },
+          {
+            "name": "modalidade",
+            "type": "string"
+          },
+          {
+            "name": "setor_programa_beneficiario",
+            "type": "string"
+          },
+          {
+            "name": "valor",
+            "type": "string"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Insira um título humanamente legível para este recurso."
+    },
+    {
+      "description": "Insira a descrição/explicação detalhada deste recurso.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "previsao_renuncias_pre_existentes",
+      "path": "data/previsao_renuncias_pre_existentes.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer"
+          },
+          {
+            "name": "tipo",
+            "type": "string"
+          },
+          {
+            "name": "regionalizacao",
+            "type": "string"
+          },
+          {
+            "name": "icms_isencao",
+            "type": "string"
+          },
+          {
+            "name": "icms_reducao_base_calculo",
+            "type": "any"
+          },
+          {
+            "name": "icms_reducao_aliquota",
+            "type": "string"
+          },
+          {
+            "name": "icms_credito_presumido",
+            "type": "string"
+          },
+          {
+            "name": "icms_incentivo_cultura_esporte",
+            "type": "any"
+          },
+          {
+            "name": "icms_suframa",
+            "type": "string"
+          },
+          {
+            "name": "icms_anistia",
+            "type": "string"
+          },
+          {
+            "name": "ipva_isencao",
+            "type": "string"
+          },
+          {
+            "name": "ipva_reducao_aliquota",
+            "type": "string"
+          },
+          {
+            "name": "anistia_itcd",
+            "type": "string"
+          },
+          {
+            "name": "anistia_taxa",
+            "type": "any"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Insira um título humanamente legível para este recurso."
+    },
+    {
+      "description": "Insira a descrição/explicação detalhada deste recurso.",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "encoding": "utf-8-sig",
+      "format": "csv",
+      "hashing": "md5",
+      "name": "renuncias_concedidas",
+      "path": "data/renuncias_concedidas.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer"
+          },
+          {
+            "name": "tipo",
+            "type": "string"
+          },
+          {
+            "name": "tributo",
+            "type": "string"
+          },
+          {
+            "name": "modalidade",
+            "type": "string"
+          },
+          {
+            "name": "norma_autorizada",
+            "type": "string"
+          },
+          {
+            "name": "montante_perdas",
+            "type": "string"
+          }
+        ]
+      },
+      "scheme": "file",
+      "title": "Insira um título humanamente legível para este recurso."
+    }
+  ],
+  "title": "Portal_renuncias_desoneracoes"
+}
