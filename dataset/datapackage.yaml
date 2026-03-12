@@ -18,7 +18,7 @@ resources:
         - name: regionalizacao
           type: string
         - name: tributo
-          type: texto
+          type: string
         - name: modalidade
           type: texto
         - name: setor_programa_beneficiario
@@ -80,7 +80,7 @@ resources:
         - name: tipo
           type: texto
         - name: tributo
-          type: texto
+          type: string
         - name: modalidade
           type: texto
         - name: norma_autorizada
