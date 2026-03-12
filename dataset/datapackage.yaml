@@ -2,8 +2,7 @@ name: portal_renuncias_desoneracoes
 owner_org: secretaria-de-estado-de-fazenda
 profile: data-package
 resources:
-  - description: Insira a descrição/explicação detalhada deste recurso.
-    dialect:
+  - dialect:
       delimiter: ;
     encoding: utf-8-sig
     format: csv
@@ -26,9 +25,8 @@ resources:
         - name: valor
           type: string
     scheme: file
-    title: Insira um título humanamente legível para este recurso.
-  - description: Insira a descrição/explicação detalhada deste recurso.
-    dialect:
+    title: Previsão Renúncias Novas
+  - dialect:
       delimiter: ;
     encoding: utf-8-sig
     format: csv
@@ -67,9 +65,8 @@ resources:
         - name: anistia_taxa
           type: any
     scheme: file
-    title: Insira um título humanamente legível para este recurso.
-  - description: Insira a descrição/explicação detalhada deste recurso.
-    dialect:
+    title: Previsão Renúncias Pré Existentes
+  - dialect:
       delimiter: ;
     encoding: utf-8-sig
     format: csv
@@ -92,5 +89,5 @@ resources:
         - name: montante_perdas
           type: string
     scheme: file
-    title: Insira um título humanamente legível para este recurso.
-title: Portal_renuncias_desoneracoes
+    title: Renúncias Concedidas
+title: Renúncias e Desonerações
